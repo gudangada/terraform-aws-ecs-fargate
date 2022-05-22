@@ -1,6 +1,6 @@
 output "service_arn" {
   description = "The Amazon Resource Name (ARN) that identifies the ECS service."
-  value       = aws_ecs_service.service.id
+  value       = local.service_arn
 }
 
 output "target_group_arn" {
@@ -30,7 +30,7 @@ output "service_sg_id" {
 
 output "service_name" {
   description = "The name of the service."
-  value       = aws_ecs_service.service.name
+  value       = local.service_name
 }
 
 output "log_group_name" {

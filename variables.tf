@@ -312,3 +312,9 @@ variable "cpu_architecture" {
   default     = "X86_64"
   type        = string
 }
+
+variable "create_with_ignore_changes_desired_count_and_task_definition" {
+  description = "Boolean to ignore changes for attribute desired count and task definition"
+  default     = false
+  type        = bool
+}

@@ -365,7 +365,9 @@ resource "aws_ecs_service" "service" {
   lifecycle {
     ignore_changes = [
       task_definition,
-      platform_version
+      load_balancer,
+      platform_version,
+      network_configuration
     ]
   }
 }

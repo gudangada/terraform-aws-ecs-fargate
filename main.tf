@@ -363,6 +363,8 @@ resource "aws_ecs_service" "service" {
   # For more information, see CreateDeployment in the AWS CodeDeploy API Reference.
 
   lifecycle {
+    create_before_destroy = true
+
     ignore_changes = [
       task_definition,
       load_balancer,

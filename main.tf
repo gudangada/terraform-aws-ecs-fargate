@@ -184,6 +184,7 @@ resource "aws_ecs_task_definition" "task" {
     }
   ],
   %{~endif}
+  %{if var.enable_cloudwatch_log}
   "logConfiguration": {
     "logDriver": "awslogs",
     "options": {
@@ -192,6 +193,7 @@ resource "aws_ecs_task_definition" "task" {
       "awslogs-stream-prefix": "container"
     }
   },
+  %{~endif}
   %{if var.task_health_check != null || var.task_health_command != null~}
   "healthcheck": {
     "command": ${jsonencode(var.task_health_command)},

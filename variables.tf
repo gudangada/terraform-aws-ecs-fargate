@@ -312,3 +312,9 @@ variable "cpu_architecture" {
   default     = "X86_64"
   type        = string
 }
+
+variable "enable_cloudwatch_log" {
+  description = "Boolean to indicate whether to create log or not"
+  default     = true
+  type        = bool
+}

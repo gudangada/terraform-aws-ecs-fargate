@@ -193,6 +193,10 @@ resource "aws_ecs_task_definition" "task" {
       "awslogs-stream-prefix": "container"
     }
   },
+  %{else}
+  "logConfiguration": {
+    "logDriver": null
+  },
   %{~endif}
   %{if var.task_health_check != null || var.task_health_command != null~}
   "healthcheck": {

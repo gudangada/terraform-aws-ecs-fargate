@@ -300,3 +300,9 @@ variable "create_with_ignore_changes_desired_count_and_task_definition" {
   default     = false
   type        = bool
 }
+
+variable "enable_cloudwatch_log" {
+  description = "Boolean to indicate whether to create log or not"
+  default     = true
+  type        = bool
+}

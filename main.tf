@@ -367,8 +367,7 @@ resource "aws_ecs_service" "service" {
       task_definition,
       load_balancer,
       platform_version,
-      network_configuration,
-      capacity_provider_strategy
+      network_configuration
     ]
   }
 }

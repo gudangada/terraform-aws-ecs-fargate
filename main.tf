@@ -225,7 +225,7 @@ resource "aws_ecs_task_definition" "task" {
   "image": "amazon/aws-otel-collector",
   "essential": true,
   "command": [
-    "--config=/etc/ecs/container-insights/otel-task-metrics-config.yaml"
+    "--config=/etc/ecs/ecs-xray.yaml"
   ],
   "cpu": 0,
   "mountPoints": [],
